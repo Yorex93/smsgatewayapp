@@ -27,6 +27,7 @@
 
     <string name="pref_title_social_recommendations">Enable Sms Interception</string>
     <string name="pref_description_social_recommendations">
+        Enable or Disable Sms Interception
     </string>
 
     <string name="pref_title_display_name">Search term</string>
@@ -156,5 +157,7 @@
         }
 
     </string>
-    <string name="version">V 0.0.1</string>
+    <string name="version">V1.0</string>
+    <string name="pref_title_auto_resolve">Auto Resolve</string>
+    <string name="pref_description_auto_resolve">Attempt to resolve messages automatically</string>
 </resources>

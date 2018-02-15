@@ -31,6 +31,7 @@ public class SmsReceiver extends BroadcastReceiver {
             String search_term = preferences.getString("search_term", null);
             String search_type = preferences.getString("search_type", null);
             Boolean enable_interception = preferences.getBoolean("enable_interception", true);
+            final Boolean auto_resolve = preferences.getBoolean("auto_resolve", true);
 
 //            Log.d("Sms Receiver Class", "Search term is "+search_term);
 //            Log.d("Sms Receiver Class", "Search type is "+search_type);
@@ -79,9 +80,12 @@ public class SmsReceiver extends BroadcastReceiver {
                                     public void run() {
                                         AppDatabase.getAppDatabase(context).smsDao().insert(new SmsEntity(message, sender, 0));
 
-                                        SmsResolver smsResolver = new SmsResolver(context);
+                                        if(auto_resolve){
+                                            SmsResolver smsResolver = new SmsResolver(context);
 
-                                        smsResolver.resolvePending();
+                                            smsResolver.resolvePending();
+                                        }
+
                                     }
                                 }).start();
                             }
