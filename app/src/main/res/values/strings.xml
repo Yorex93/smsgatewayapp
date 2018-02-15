@@ -1,0 +1,160 @@
+<resources>
+    <string name="app_name">SMS Gateway</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Successful</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_error_sms">Failed</string>
+    <string name="title_sent_sms">Sent</string>
+    <string name="title_pending_sms">Pending</string>
+    <string name="sms_title">Intercepted SMSes</string>
+    <string name="failed_sms_title">Failed SMSes</string>
+    <string name="pending_sms_title">Pending SMSes</string>
+
+    <string name="sms_row_title_text">Date</string>
+    <string name="sms_row_title_content">Content</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="settings_icon">settings</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable Sms Interception</string>
+    <string name="pref_description_social_recommendations">
+    </string>
+
+    <string name="pref_title_display_name">Search term</string>
+    <string name="pref_default_display_name">Search</string>
+
+    <string name="pref_title_add_friends_to_messages">Search Type</string>
+    <string-array name="pref_example_list_titles">
+        <item>Appears in beginning of sms</item>
+        <item>Appears Anywhere</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="label_sms_details_activity">Sms Detail</string>
+    <string name="label_text_view_from">From:</string>
+    <string name="text_view_from">Phone</string>
+    <string name="label_text_view_date">Date:</string>
+    <string name="text_view_date">2018-12-12</string>
+    <string name="sms_detail_edit_text_content">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</string>
+    <string name="button_text_mark_pending">Mark pending</string>
+    <string name="button_text_delete">Delete</string>
+    <string name="button_text_success">Mark Success</string>
+    <string name="delete_icon">Delete Sms</string>
+    <string name="no_data_available">No Failed Sms</string>
+    <string name="no_data_available_failed">No Failed Sms</string>
+    <string name="no_data_available_success">No Successful Sms</string>
+    <string name="no_data_available_pending">No Pending Sms</string>
+    <string name="pref_default_post_url">http://</string>
+    <string name="pref_title_post_url">Post Url</string>
+    <string name="help_icon">Help</string>
+    <string name="label_help_activity">Help</string>
+    <string name="help_header_text">SMS Interceptor V0.0.1</string>
+    <string name="help_content_text1">
+        Sms Interceptor allows you to turn your phone to a simple SMS gateway. To setup, Specify a search term, a search type and a POST url in the general settings.
+    </string>
+    <string name="help_content_text2">
+        <p style='font-size: 8px; color: lightgray'>The search term specifies the text that should be in the SMS to intercept, the search type specifies how the term should be searched for, while the POST URL
+            specifies a URL to send a post request with the intercepted messages as the payload.</p>
+    </string>
+    <string name="help_content_text3">
+        An Intercepted SMS can have one of three states: A pending state for Messages that have not been posted to the URL, a success status for messages that have been
+        Posted and a success status returned while a failed status specifies messages that have been posted but returned a failed status
+    </string>
+    <string name="sample_payload">
+        //Sample JSON request \n
+        { \n
+        \t\"pendingSms\": [ \n
+        \t\t{ \n
+        \t\t\t\"smsId\":1,\n
+        \t\t\t\"phone\":\"+234787334382\",\n
+        \t\t\t\"content\":\"Search_term MyName Other Content\"\n
+        \t\t},\n
+        \t\t{\n
+        \t\t\t\"smsId\":2,\n
+        \t\t\t\"phone\":\"+234787334382\",\n
+        \t\t\t\"content\":\"Search_term MyName Other Content\"\n
+        \t\t}\n
+        \t]\n
+        }
+
+        \n\n
+
+        //Expected JSON response \n
+        { \n
+        \t\"resolvedSms\": [ // notice the name change \n
+        \t\t{ \n
+        \t\t\t\"smsId\":1,\n
+        \t\t\t\"phone\":\"+234787334382\",\n
+        \t\t\t\"content\":\"Search_term MyName Other Content\"\n
+        \t\t\t\"status\":1 // status 1 for success \n
+        \t\t},\n
+        \t\t{\n
+        \t\t\t\"smsId\":2,\n
+        \t\t\t\"phone\":\"+234787334382\",\n
+        \t\t\t\"content\":\"Search_term MyName Other Content\"\n
+        \t\t\t\"status\":2 // status 2 for failed/error \n
+        \t\t}\n
+        \t]\n
+        }
+
+    </string>
+    <string name="version">V 0.0.1</string>
+</resources>

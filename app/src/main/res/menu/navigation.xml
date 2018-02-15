@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/ic_check_box_black_24dp"
+        android:title="@string/title_dashboard" />
+
+    <item
+        android:id="@+id/navigation_pending"
+        android:icon="@drawable/ic_update_black_24dp"
+        android:title="@string/title_pending_sms" />
+
+    <item
+        android:id="@+id/navigation_error"
+        android:icon="@drawable/ic_error_black_24dp"
+        android:title="@string/title_error_sms" />
+
+
+
+
+</menu>
